@@ -37,7 +37,7 @@ Route::get('/gudang', function () {
         "active" => "gudang",
 
     ]);
-});
+})->middleware('guest');
 Route::get('/posts', [PostController::class, 'index']);
 // halaman single post
 Route::get('post/{post:slug}',  [PostController::class, 'show']);

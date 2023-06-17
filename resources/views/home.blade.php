@@ -58,7 +58,11 @@
 
         <div class="content">
             <p>Silahkan Login untuk dapat mengakses fitur kami<3 </p>
-                    <a href="/login" class="button">Start</a>
+                    <a href="
+                    @if (auth()->check()) /dashboard @endif
+
+                    @guest /login @endguest"
+                        class="button">Start</a>
         </div>
     </body>
 @endsection

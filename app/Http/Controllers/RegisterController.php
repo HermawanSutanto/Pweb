@@ -29,6 +29,7 @@ class RegisterController extends Controller
             'organisasi_id' => 'required',
 
         ]);
+
         // $validatedData['password'] = bcrypt($validatedData['password']);
         // $validatedData['password'] = bcrypt($validatedData['password']);
         $validatedData['password'] = Hash::make($validatedData['password']);
